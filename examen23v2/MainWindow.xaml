@@ -1,0 +1,72 @@
+﻿<Window x:Class="examen23v2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examen23v2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="104*"></RowDefinition>
+            <RowDefinition Height="303*"></RowDefinition>
+            <RowDefinition Height="162*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontFamily="Technical Italic, Comic Sans MS, Arial" HorizontalAlignment="Center"  FontSize="20"   VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" x:Name="passnet"  Height="44" Margin="61,172,182,87" ></TextBlock>
+        <TextBlock  FontSize="20" FontFamily="Technical Italic, Comic Sans MS, Arial"   VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" x:Name="loginanet"  Height="42" HorizontalAlignment="Center" Margin="61,84,192,177"></TextBlock>
+        <TextBlock Grid.ColumnSpan="2" Background="DeepSkyBlue"></TextBlock>
+
+        <Button Content="Войти"  x:Name="go" Click="Go_Click"  Grid.Column="0" Grid.Row="2" FontSize="20" Height="65" Width="170" Background="DeepSkyBlue">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="310" ShadowDepth="8" Opacity="0.4"/>
+            </Button.Effect>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Background="DeepSkyBlue" x:Name="reg" Click="Reg_Click1" Grid.Column="1" FontSize="19" HorizontalAlignment="Center" Grid.Row="2"  Height="65" Width="190" Content="Зарегестрироваться">
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Direction="310" ShadowDepth="8" Opacity="0.4"/>
+            </Button.Effect>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <TextBlock FontSize="18" Margin="15,20,0,0">Логин</TextBlock>
+            <TextBox  VerticalContentAlignment="Center" x:Name="login1" HorizontalContentAlignment="Left" FontSize="30" Margin="15,0,0,0"  Grid.ColumnSpan="2" Grid.Row="1"   HorizontalAlignment="Left" Height="50" Width="200" BorderBrush="Gray" >
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </TextBox.Effect>
+
+
+            </TextBox>
+            <TextBlock FontSize="18" Margin="15,20,0,0" >Пароль</TextBlock>
+            <PasswordBox BorderBrush="Gray" x:Name="password1"  HorizontalContentAlignment="Left"  FontSize="30" Margin="15,0,0,0" UseLayoutRounding="True"  Grid.ColumnSpan="2" Grid.Row="1"  HorizontalAlignment="Left" Height="50" Width="200">
+                <PasswordBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </PasswordBox.Resources>
+                <PasswordBox.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </PasswordBox.Effect>
+            </PasswordBox>
+
+
+
+
+        </StackPanel>
+
+       
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="examen23v2.reg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examen23v2"
+        mc:Ignorable="d"
+        Title="reg" Height="500" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="104*"></RowDefinition>
+            <RowDefinition Height="303*"></RowDefinition>
+            <RowDefinition Height="162*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontFamily="Technical Italic, Comic Sans MS, Arial" HorizontalAlignment="Center"  FontSize="20"   VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" x:Name="passnet"  Height="44" Margin="61,172,182,87" ></TextBlock>
+        <TextBlock  FontSize="20" FontFamily="Technical Italic, Comic Sans MS, Arial"   VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" x:Name="loginanet"  Height="42" HorizontalAlignment="Center" Margin="61,84,192,177"></TextBlock>
+        <TextBlock Grid.ColumnSpan="2" Background="DeepSkyBlue"></TextBlock>
+       
+        <StackPanel HorizontalAlignment="Center" Grid.RowSpan="2" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock FontSize="18" Margin="15,20,0,0">Логин</TextBlock>
+            <TextBox  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="30" Margin="15,0,0,0"   Grid.Row="1" x:Name="logintt"  HorizontalAlignment="Left" Height="50" Width="200" BorderBrush="Gray" >
+                <TextBox.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </TextBox.Effect>
+
+
+            </TextBox>
+            <TextBlock FontSize="18" Margin="15,20,0,0" >Пароль</TextBlock>
+            <PasswordBox BorderBrush="Gray"  HorizontalContentAlignment="Left" x:Name="password1" FontSize="30" Margin="15,0,0,0" UseLayoutRounding="True"   Grid.Row="1"  HorizontalAlignment="Left" Height="50" Width="200" AutomationProperties.HelpText="gg">
+                <PasswordBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </PasswordBox.Resources>
+                <PasswordBox.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </PasswordBox.Effect>
+            </PasswordBox>
+
+
+
+
+        </StackPanel>
+
+        <Button Background="DeepSkyBlue" Margin="10,0,0,0"  Height="60" FontSize="18" Content="Зарегестрироваться" Grid.Column="0" Grid.Row="2" x:Name="reg1" Click="Reg1_Click"   >
+           
+        </Button>
+        <Button Background="DeepSkyBlue" Margin="10" Height="60" FontSize="18" Content="Отмена"  Grid.Column="1" Grid.Row="2" Click="Button_Click"   >
+           
+        </Button>
+
+    </Grid>
+</Window>
